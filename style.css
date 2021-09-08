@@ -143,6 +143,12 @@ img {
   max-width: 400px;
 }
 
+#tableau {
+  border: 0;
+  margin: 0px;
+  width: 100%;
+  max-width: 600;
+}
 img.headshot{
   margin: 35px;
 }
@@ -173,6 +179,8 @@ section.clips{
 
 section.img_clips{
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #scroller{

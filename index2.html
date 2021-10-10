@@ -31,10 +31,22 @@
 <section class="clips">
 
     <h2>Clips</h2>
-      <h3>D3 Bar Chart</h3>
+      <h3>D3 Choropleth Map</h3>
       <p>I have just started learning the D3 library, and this is my first custom viz after walking through some tutorials. Complexity will improve!</p>
       <section class="img_clips">
-        <iframe width="560" height="292" src="https://vizhub.com/benpedroscott/2a1ecb773ec944fbba0c9ea824a24ac0?mode=embed" title="Custom Bars v1" frameborder="0" ></iframe>
+                    <div id="observablehq-chart-6f915455"></div>
+                    <div id="observablehq-viewof-dates-6f915455"></div>
+                    <p>Credit: <a href="https://observablehq.com/@benpedroscott/untitled">Untitled by benpedroscott</a></p>
+
+                    <script type="module">
+                    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+                    import define from "https://api.observablehq.com/@benpedroscott/untitled.js?v=3";
+                    new Runtime().module(define, name => {
+                      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-6f915455"));
+                      if (name === "viewof dates") return new Inspector(document.querySelector("#observablehq-viewof-dates-6f915455"));
+                      return ["dayData"].includes(name);
+                    });
+                    </script>
       </section>
       <h3>Full-page spread on COVID-19 and airline industry</h3>
       <p>I created a full-page infographic spread for the Columbia Missourian about how COVID-19 impacted the airline industry. I analyzed all the data used for the project, as well. The spread was a semester-long project I worked on while learning the basics of data visualizations and graphic design.</p>

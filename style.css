@@ -1,3 +1,31 @@
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 10px;
+  align-items: center;
+  margin: 50px
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 0px;
+  font-size: 30px;
+  text-align: center;
+}
+
+
+img.portfolio {
+max-width: auto;
+max-height: auto;
+}
+
+img.graphicssection {
+width: 90%;
+max-width: 100%;
+}
+
 body{
   display: block;
   margin-right: auto;
@@ -7,6 +35,7 @@ body{
   /*breakthrough! nav and title kept on switching position when flipping between homepage and clips page. This fixed it, the issue was that the scroll bar was casuing the shift. I'm a genius.*/
   overflow: overlay;
 }
+
 
 h1{
   font-size: 70px;
@@ -122,17 +151,24 @@ nav a:hover, p a:hover {
   background-color: #e3e3e3;
   color: black;
   cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 li a:hover{
   background-color: #e3e3e3;
   color: black;
   cursor: pointer;
+  transition-duration: 0.3s;
 }
 
 a.button:hover {
   background-color: white;
   color: black;
+  transition-duration: 0.5s;
+}
+
+img.portfolio {
+ width: 100%;
 }
 
 img {
@@ -141,6 +177,13 @@ img {
   width: 75%;
   min-width: 200px;
   max-width: 400px;
+}
+
+img.portfolio:hover {
+transform: scale(1.5);
+transition-duration: 0.2s;
+filter: drop-shadow(0 0 20px grey);
+cursor: pointer;
 }
 
 #tableau {
@@ -191,7 +234,23 @@ section.img_clips{
   display: none;
 }
 
+@media (max-width: 1430px){
+  .grid-container {
+    grid-template-columns: auto auto;
+  }
+
+  img.portfolio:hover {
+  transform: scale(1.2);
+}
+
 @media (max-width: 800px) {
+
+.grid-container {
+  grid-template-columns: auto;
+}
+
+img.portfolio:hover {
+transform: scale(1.2);
 
   body{
     padding: 1rem;

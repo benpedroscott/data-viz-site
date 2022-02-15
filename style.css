@@ -22,12 +22,22 @@
 
 img.portfolio {
 max-width: auto;
-max-height: auto;
+max-height: 400px;
 }
 
 img.graphicssection {
 width: 90%;
-max-width: 100%;
+max-width: 90%;
+}
+
+#elem8 {
+  max-height: 400px;
+  max-width: 270px;
+  display: inline-grid;
+}
+
+#elem9 {
+  max-width: 368px;
 }
 
 body{
@@ -184,7 +194,7 @@ img {
 }
 
 img.portfolio:hover {
-transform: scale(1.5);
+transform: scale(1.3);
 transition-duration: 0.2s;
 filter: drop-shadow(0 0 20px grey);
 cursor: pointer;

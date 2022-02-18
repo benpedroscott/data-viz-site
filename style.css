@@ -301,6 +301,7 @@ section.img_clips{
 #menu_trigger {
   display: none;
   font-size: 60px;
+  width: 120%;
   color: white;
   background-color: #0089D0;
   border-radius: 20px;

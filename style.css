@@ -300,14 +300,12 @@ section.img_clips{
 
 #menu_trigger {
   display: none;
-}
+  font-size: 60px;
+  color: white;
+  background-color: #0089D0;
+  border-radius: 20px;
+  border: none;
 
-#menu_trigger2 {
-  display: none;
-}
-
-#menu_trigger3 {
-  display: none;
 }
 
 @media (max-width: 1430px){

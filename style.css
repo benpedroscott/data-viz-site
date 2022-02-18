@@ -260,8 +260,8 @@ cursor: pointer;
   max-width: 600;
 }
 img.headshot{
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  padding-right: 20px;
 }
 
 /*I tried to see if I could make the background color box fitted to the body of text, but changing margins would condense the text as well, which didn't look great to me*/
@@ -299,6 +299,14 @@ section.img_clips{
 }
 
 #menu_trigger {
+  display: none;
+}
+
+#menu_trigger2 {
+  display: none;
+}
+
+#menu_trigger3 {
   display: none;
 }
 

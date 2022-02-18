@@ -260,7 +260,8 @@ cursor: pointer;
   max-width: 600;
 }
 img.headshot{
-  margin: 35px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*I tried to see if I could make the background color box fitted to the body of text, but changing margins would condense the text as well, which didn't look great to me*/
@@ -325,7 +326,7 @@ section.img_clips{
 
     img.portfolio:hover {
     transform: scale(1.2);
-
+}
       body{
         padding: 1rem;
       }
@@ -363,4 +364,5 @@ section.img_clips{
       #menu_nav{
         display: none;
       }
+
   }

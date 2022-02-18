@@ -316,7 +316,7 @@ section.img_clips{
     img.portfolio:hover {
     transform: scale(1.2);
   }
-@media (max-width: 1400px){
+@media (max-width: 1000px){
   .grid-container-2{
     grid-template-columns: auto;
 }
@@ -348,6 +348,10 @@ transform: scale(1.2);
     width: 100%;
     border-top: none;
     border-bottom: none;
+  }
+
+  li.list1 {
+    font-size: 30px;
   }
 
   section.body2{

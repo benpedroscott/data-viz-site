@@ -54,7 +54,7 @@ p{
 }
 
 .workList{
-  list-style-type: none;
+  list-style-type:'-';
   margin: 0;
   margin-bottom:5px;
   padding: 0;
@@ -62,7 +62,8 @@ p{
 }
 
 li{
-margin-bottom: 5px;
+margin-bottom: 15px;
+margin-left: 11px;
 }
 
 a:hover{

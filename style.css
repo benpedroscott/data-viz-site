@@ -7,6 +7,7 @@
 body{
   background-color: rgba(249, 221, 160, 0.12);
 }
+
 .wrapper{
   display: flex;
   flex-direction: column;

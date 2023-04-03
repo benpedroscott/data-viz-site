@@ -1,0 +1,155 @@
+@import "background_cards.css";
+
+* {
+  color: #3b3232;
+  font-size: 18px;
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  background-color: rgba(249, 221, 160, 0.12);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 1em;
+  text-align: left;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0px;
+  margin-left: -1px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.twitter {
+  width: 40px;
+  height: 40px;
+}
+
+.twitWrapper {
+  height: 40px;
+}
+
+h2 {
+  margin-bottom: 0.2em;
+  font-size: 1.3em;
+}
+
+p {
+  margin-bottom: 1em;
+  margin-top: 0.2em;
+  font-weight: 300;
+  line-height: 1.6em;
+}
+
+/* .workList{
+  list-style-type:'-';
+  margin: 0;
+  margin-bottom:5px;
+  padding: 0;
+  font-weight: 300;
+}
+
+li{
+  margin-bottom: 15px;
+  margin-left: 11px;
+} */
+
+a:hover {
+  color: gray;
+}
+
+#byline-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.byline-box {
+  width: 400px;
+  height: 300px;
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  align-items: flex-end;
+  /* border: 3px solid red; */
+  border-radius: 20px;
+
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  background-position-x: center;
+  box-shadow: -5px 5px 10px rgb(0 0 0 / 30%);
+  border: 0.5px solid #141213;
+  transition: background-size 250ms linear, 
+  background-position-y 250ms linear;
+}
+
+.image-entry {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.byline-text {
+  margin: 0;
+}
+
+.entry-text-label {
+  position: relative;
+  font-size: 0.65em;
+  text-transform: uppercase;
+}
+
+.entry-text-hed {
+  position: relative;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.3em;
+}
+
+.entry-text-dek {
+  position: relative;
+  font-size: 0.8em;
+}
+
+.white {
+  color: black;
+  text-shadow: white 0px 0px 5px, white 0px 0px 5px;
+}
+
+.black {
+  color: white;
+}
+
+.byline-textbox {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+.entry-video{
+  width: 400px;
+  height: 300px;
+  z-index: 0;
+  border-radius: 19px;
+  position: absolute;
+  border: 0.5px solid #141213;
+}

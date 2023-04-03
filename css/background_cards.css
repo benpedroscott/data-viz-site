@@ -1,0 +1,72 @@
+.artemis {
+  background-image: url(../images/artemis.png);
+  background-size: 107%;
+  background-color: #141213;
+  background-position-y: -17px;
+}
+
+.artemis:hover {
+  background-size: 112%;
+  background-position-y: -17px;
+}
+
+.hawaii {
+  background-color: #141213;
+}
+
+.longevity {
+  background-color: #141213;
+}
+
+.starmap {
+  background-image: url(../images/starmap.png);
+  background-size: 107%;
+  background-color: #141213;
+}
+
+.starmap:hover {
+  background-size: 114%;
+  background-position-y: -10px;
+}
+
+.stingray {
+  background-image: url(../images/stingray.png);
+  background-size: 107%;
+  background-color: white;
+}
+
+.stingray:hover {
+  background-size: 114%;
+  background-position-y: -10px;
+}
+
+.stonehenge {
+  background-color: #141213;
+}
+
+.tut {
+  background-color: #141213;
+}
+
+.wells {
+  background-color: white;
+  background-image: url(../images/wells.png);
+  background-size: 107%;
+  border: 0.5px solid #141213;
+}
+
+.wells:hover {
+  background-size: 114%;
+  background-position-y: -15px;
+}
+
+.venus {
+  background-image: url(../images/venus.png);
+  background-size: 78%;
+  background-color: #141213;
+}
+
+.venus:hover {
+  background-size: 85%;
+  background-position-y: -10px;
+}

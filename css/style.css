@@ -2,7 +2,7 @@
 
 * {
   color: #3b3232;
-  font-size: 18px;
+  font-size: 21px;
   font-family: 'Merriweather', serif;
 }
 
@@ -56,6 +56,11 @@ p {
   margin-top: 0.2em;
   font-weight: 300;
   line-height: 1.6em;
+
+  @media (min-width: 500px){
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 /* .workList{

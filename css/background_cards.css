@@ -70,3 +70,13 @@
   background-size: 85%;
   background-position-y: -10px;
 }
+
+.ele{
+  background-image: url(../images/ele.jpg);
+  background-size: 120%;
+  background-color: #141213;
+}
+
+.ele:hover {
+  background-size: 130%;
+}

@@ -8,16 +8,19 @@
 
 body {
   background-color: rgba(249, 221, 160, 0.12);
+  max-width: 550px;
+  margin: auto;
+  /* margin: 8px; */
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 400px;
-  margin: auto;
+  max-width: 550px;
   margin-top: 1em;
   text-align: left;
+  margin: 1em;
 }
 
 h1 {
@@ -59,9 +62,9 @@ p {
 }
 
 .dek{
-  @media (min-width: 500px){
-    text-align: justify;
-    text-justify: inter-word;
+  @media (min-width: 550px){
+    /* text-align: justify;
+    text-justify: inter-word; */
   }
 }
 
@@ -88,8 +91,9 @@ a:hover {
 }
 
 .byline-box {
-  width: 400px;
-  height: 300px;
+  max-width: 550px;
+  aspect-ratio: 4/3;
+  max-height: calc(550px * .75);
   margin: 0px 0px 20px 0px;
   display: flex;
   align-items: flex-end;
@@ -130,6 +134,10 @@ a:hover {
   font-size: 1.2em;
   font-weight: bold;
   line-height: 1.3em;
+
+  @media (max-width: 400px) {
+    font-size: 1em;
+  }
 }
 
 .entry-text-dek {
@@ -153,10 +161,16 @@ a:hover {
 }
 
 .entry-video{
-  width: 400px;
-  height: 300px;
+  max-width: 550px;
+  aspect-ratio: 4/3;
+  width: 100%;
+  max-height: calc(550px * .75);
   z-index: 0;
   border-radius: 19px;
   position: absolute;
   border: 0.5px solid #141213;
+}
+
+.entry-vid-wrapper{
+  position: relative;
 }

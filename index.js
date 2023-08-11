@@ -1,4 +1,15 @@
-let htmlData = [{
+let htmlData = [
+    {
+        "short": "mummy",
+        "label": "history",
+        "hed": "Step inside an ancient mummfication workshop",
+        "dek": "ThreeJS, TheatreJS, Blender, HTML5, Illustrator, Photoshop, Meshlab, CloudCompare",
+        "link": "https://www.nationalgeographic.com/premium/graphics/egypt-mummy-saqqara-excavation-golden-age-feature",
+        "asset": "background-image",
+        "color": "black",
+        "role": "I led the development and design of the project. I developed a reusable and extendable 3D project pipeline and workflow centered on ThreeJS, TheatreJS, and a custom labelling method. I created the 3D model with raw point cloud data in Meshlab and CloudCompare, and I optimized the model for digital usage in Blender. I made the cutaway 3D workshop. I also worked on the print magazine version, making a highly detailed and refined 3D model in Blender."
+    },
+    {
         "short": "ele",
         "label": "animals",
         "hed": "Elephants are learning to live with us. Can we do the same?",
@@ -6,6 +17,7 @@ let htmlData = [{
         "link": "https://www.nationalgeographic.com/premium/graphics/asian-elephants-behavior-coexistence-survival-feature",
         "asset": "background-image",
         "color": "black",
+        "role": "As a one developer of a larger team, I implemented bespoke features and designs that worked across all devices. I solved issues around the complex behavior for images being shrunk down as a user scrolls."
     },
     {
         "short": "longevity",
@@ -15,6 +27,7 @@ let htmlData = [{
         "link": "https://www.nationalgeographic.com/magazine/graphics/animal-aging-longevity",
         "asset": "video",
         "color": "white",
+        "role": "I converted the assets from print to digital. I animated the intro video and problem-solved a cross-browser method of handling transparent video."
     },
     {
         "short": "venus",
@@ -24,7 +37,7 @@ let htmlData = [{
         "link": "https://www.nationalgeographic.com/science/article/venus-is-volcanically-alive",
         "asset": "background-image",
         "color": "black",
-
+        "role": "Graphics editor"
     },
     {
         "short": "stingray",
@@ -34,15 +47,17 @@ let htmlData = [{
         "link": "https://www.nationalgeographic.com/animals/article/worlds-biggest-ocean-stingray-tagged-for-first-time",
         "asset": "background-image",
         "color": "white",
+        "role": "Graphics editor"
     },
     {
         "short": "hawaii",
         "label": "science",
-        "hed": "Scientists just mapped Hawaii's volcanic underbelly in stunning detail",
+        "hed": "Hawaii's volcanic underbelly in stunning detail",
         "dek": "Blender, Illustrator, qGIS, FFmpeg, JavaScript",
         "link": "https://www.nationalgeographic.com/science/article/scientists-mapped-hawaiis-volcanic-underbelly-in-stunning-detail",
         "asset": "video",
         "color": "black",
+        "role": "With a tight two-week deadline, I learned how to combine GIS and Blender without any prior experience in 3D GIS. I also jerry-rigged Blender so it could handle large point cloud GIS data."
     },
     {
         "short": "starmap",
@@ -52,6 +67,7 @@ let htmlData = [{
         "link": "https://www.nationalgeographic.com/magazine/article/worlds-oldest-map-of-night-sky-amazingly-accurate",
         "asset": "background-image",
         "color": "black",
+        "role": "Graphics editor"
     },
     {
         "short": "tut",
@@ -61,6 +77,7 @@ let htmlData = [{
         "link": "https://www.nationalgeographic.com/magazine/graphics/see-the-enduring-power-of-king-tut-as-never-before-feature",
         "asset": "video",
         "color": "black",
+        "role": "I learned After Effects and keyframed many of the artifact animations in the project."
     },
     {
         "short": "artemis",
@@ -70,6 +87,7 @@ let htmlData = [{
         "link": "https://www.nationalgeographic.com/magazine/graphics/a-visual-guide-of-nasas-plan-to-get-back-to-the-moon",
         "asset": "background-image",
         "color": "black",
+        "role": "This was my first project I lead for Nat Geo. I used Illustrator to creat all the stylized assets, including a dozen other detailed rocket models that were scrapped during development. I collaborated with an outside researcher in addition to doing my own research."
     },
     {
         "short": "wells",
@@ -79,6 +97,7 @@ let htmlData = [{
         "link": "https://www.nationalgeographic.com/environment/article/to-find-old-methane-leaking-oil-wells-researchers-look-to-history",
         "asset": "background-image",
         "color": "white",
+        "role": "I taught myself the basics of GIS, creating my own shaded relief. I also learned a solid qGIS-to-MapPublisher workflow."
     },
     {
         "short": "stonehenge",
@@ -88,6 +107,7 @@ let htmlData = [{
         "link": "https://www.nationalgeographic.com/magazine/graphics/see-how-stones-strength-and-smarts-built-stonehenge-feature",
         "asset": "video",
         "color": "black",
+        "role": "I handled all the labelling for the project."
     },
 ];
 
@@ -115,8 +135,13 @@ function fillHtml() {
         let entryDek = document.createElement("p")
         entryDek.setAttribute("class", `byline-text entry-text-dek ${htmlData[i].color}`);
 
+        let entryRole = document.createElement("p")
+        entryRole.setAttribute("class", `dek`);
+
         let wrapper;
         if (htmlData[i].asset === "video") {
+            let entryVidWrapper = document.createElement("div");
+            entryVidWrapper.setAttribute("class", "entry-vid-wrapper")
             let entryVideo = document.createElement("video");
             entryVideo.setAttribute("src", `/images/${htmlData[i].short}.mp4`);
             entryVideo.setAttribute("class", "entry-video");
@@ -131,6 +156,8 @@ function fillHtml() {
 
             bylineWrapper
                 .appendChild(bylineEntry)
+                .appendChild(entryVidWrapper)
+            entryVidWrapper
                 .appendChild(entryVideo)
             let wrapper =  bylineWrapper
                 .appendChild(bylineBox)
@@ -147,6 +174,9 @@ function fillHtml() {
         
                 entryDek.innerText = htmlData[i].dek;
                 wrapper.appendChild(entryDek);
+
+                // entryRole.innerText = htmlData[i].role;
+                //     bylineWrapper.appendChild(entryRole);
 
         } else {
 
@@ -165,6 +195,9 @@ function fillHtml() {
         
                 entryDek.innerText = htmlData[i].dek;
                 wrapper.appendChild(entryDek);
+
+                // entryRole.innerText = htmlData[i].role;
+                // bylineWrapper.appendChild(entryRole);
 
         }
 

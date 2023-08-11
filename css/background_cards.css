@@ -1,3 +1,13 @@
+.mummy{
+  background-image: url(../images/mummy.jpg);
+  background-size: 107%;
+}
+
+.mummy:hover{
+  background-size: 112%;
+  /* background-position-y: -17px; */
+}
+
 .artemis {
   background-image: url(../images/artemis.png);
   background-size: 107%;

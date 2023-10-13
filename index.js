@@ -1,9 +1,19 @@
 let htmlData = [
     {
+        "short": "ast",
+        "label": "science",
+        "hed": "These 5 asteroids pose the greatest risk to Earth",
+        "dek": "ThreeJS, TheatreJS, Blender, Python, Illustrator",
+        "link": "https://www.nationalgeographic.com/premium/graphics/five-asteroids-could-hit-earth",
+        "asset": "video",
+        "color": "black",
+        "role": "I led the development, design and research of the project. I created an accurate 3D model of the solar system, using data from NASA and orbital mechanic formulas."
+    },
+    {
         "short": "mummy",
         "label": "history",
         "hed": "Step inside an ancient mummfication workshop",
-        "dek": "ThreeJS, TheatreJS, Blender, HTML5, Illustrator, Photoshop, Meshlab, CloudCompare",
+        "dek": "ThreeJS, TheatreJS, Blender, Illustrator, Photoshop, Meshlab, CloudCompare",
         "link": "https://www.nationalgeographic.com/premium/graphics/egypt-mummy-saqqara-excavation-golden-age-feature",
         "asset": "background-image",
         "color": "black",
@@ -144,7 +154,7 @@ function fillHtml() {
             entryVidWrapper.setAttribute("class", "entry-vid-wrapper")
             let entryVideo = document.createElement("video");
             entryVideo.setAttribute("src", `/images/${htmlData[i].short}.mp4`);
-            entryVideo.setAttribute("class", "entry-video");
+            entryVideo.setAttribute("class", `entry-video entry-video-${htmlData[i].short}`);
             entryVideo.muted=true;
             entryVideo.loop=true;
             entryVideo.addEventListener("mouseover", function(e){

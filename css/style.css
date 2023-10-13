@@ -171,6 +171,17 @@ a:hover {
   border: 0.5px solid #141213;
 }
 
+.entry-video-ast{
+  max-width: 550px;
+  aspect-ratio: 4/3;
+  width: 100%;
+  max-height: calc(550px * .75);
+  z-index: 0;
+  border-radius: 19px;
+  position: absolute;
+  border: none;
+}
+
 .entry-vid-wrapper{
   position: relative;
 }

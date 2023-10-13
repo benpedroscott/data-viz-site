@@ -1,3 +1,7 @@
+.ast {
+  background-color: black;
+}
+
 .mummy{
   background-image: url(../images/mummy.jpg);
   background-size: 107%;

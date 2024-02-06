@@ -1,12 +1,31 @@
+.para {
+  background-image: url(../images/para.png);
+  background-size: 100%;
+  background-position: center;
+}
+
+.para:hover {
+  background-size: 105%;
+}
+
 .birth {
   background-image: url(../images/birth.jpg);
   background-size: 107%;
+  background-position: center;
+}
+
+.birth:hover {
+  background-size: 112%;
 }
 
 .monarch {
   background-image: url(../images/monarch.png);
-  background-size: 105%;
+  background-size: 100%;
   background-position: center;
+}
+
+.monarch:hover {
+  background-size: 105%;
 }
 
 .yip {
@@ -15,10 +34,18 @@
   background-position: center;
 }
 
+.yip:hover {
+  background-size: 160%;
+}
+
 .al {
   background-image: url(../images/al.jpg);
   background-size: 100%;
   background-position: center;
+}
+
+.al:hover {
+  background-size: 105%;
 }
 
 .ast {

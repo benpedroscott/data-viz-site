@@ -59,8 +59,14 @@ function fillHtml(entry, section) {
 }
 
 function vid(entry, section) {
+
+    let link = document.createElement("a")
+        link.setAttribute("href", entry.link)
+        
+    
     let entryVidWrapper = document.createElement("div");
     entryVidWrapper.setAttribute("class", "entry-vid-wrapper")
+    link.appendChild(entryVidWrapper)
     let entryVideo = document.createElement("video");
     entryVideo.setAttribute("src", `/images/${entry.short}.mp4`);
     entryVideo.setAttribute("class", `entry-video entry-video-${entry.short}`);
@@ -75,7 +81,7 @@ function vid(entry, section) {
 
     section
         .appendChild(bylineEntry)
-    section.appendChild(entryVidWrapper)
+    section.appendChild(link)
     entryVidWrapper
         .appendChild(entryVideo)
     let wrapper =  section
@@ -85,34 +91,36 @@ function vid(entry, section) {
     entryLabel.innerText = entry.label;
     wrapper.appendChild(entryLabel)
 
-    let link = document.createElement("a")
-        link.setAttribute("href", entry.link)
-        wrapper.appendChild(link)
-        entryHed.innerText = entry.hed;
-        link.appendChild(entryHed);
+    // let link = document.createElement("a")
+    //     link.setAttribute("href", entry.link)
+    //     wrapper.appendChild(link)
+    //     entryHed.innerText = entry.hed;
+    //     link.appendChild(entryHed);
 
-        entryDek.innerText = entry.dek;
-        wrapper.appendChild(entryDek);
+    //     entryDek.innerText = entry.dek;
+    //     wrapper.appendChild(entryDek);
 
-        // entryRole.innerText = entry.role;
-        //     section.appendChild(entryRole);
 }
 
 function img(entry, section) {
+
+    let link = document.createElement("a")
+        link.setAttribute("href", entry.link)
     
-    section.appendChild(bylineBox)
+    section.appendChild(link)
+        .appendChild(bylineBox)
     
-    let wrapper = section.appendChild(bylineEntry)
+    let wrapper = link.appendChild(bylineEntry)
     .appendChild(bylineTextbox)
 
     entryLabel.innerText = entry.label;
     wrapper.appendChild(entryLabel)
 
-    let link = document.createElement("a")
-        link.setAttribute("href", entry.link)
-        wrapper.appendChild(link)
+    // let link = document.createElement("a")
+    //     link.setAttribute("href", entry.link)
+    //     wrapper.appendChild(link)
         entryHed.innerText = entry.hed;
-        link.appendChild(entryHed);
+        wrapper.appendChild(entryHed);
 
         entryDek.innerText = entry.dek;
         wrapper.appendChild(entryDek);  

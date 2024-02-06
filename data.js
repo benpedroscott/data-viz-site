@@ -1,5 +1,16 @@
 export let htmlData = [
     {
+        "short": "para",
+        "label": "science",
+        "hed": "How far away is the sun? They went on a perilous journey to find out",
+        "dek": "Illustrator",
+        "link": "https://www.nationalgeographic.com/premium/article/perilous-17th-century-french-journey-find-distance-to-sun-cassini-richer",
+        "asset": "background-image",
+        "color": "white",
+        "role": "I led the development, design and research of the project. I created an accurate 3D model of the solar system, using data from NASA and orbital mechanic formulas.",
+        "lvl": 3,
+    },
+    {
         "short": "ast",
         "label": "science",
         "hed": "These 5 asteroids pose the greatest risk to Earth",
